@@ -25,6 +25,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'dotenv-rails', :groups => [:development, :test]
 
+gem 'rails_12factor', group: :production
+
 gem 'omniauth-oauth2', "~> 1.1.0"
 gem 'omniauth-spotify'
 
@@ -50,4 +52,6 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+
+ruby "2.2.3"
 
