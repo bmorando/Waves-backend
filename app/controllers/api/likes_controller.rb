@@ -7,6 +7,7 @@ class Api::LikesController < ApplicationController
 
   def create
     like = Like.new(like_params)
+    like.user_id = current_user.id
 
     if like.save
       render json: like
@@ -16,7 +17,7 @@ class Api::LikesController < ApplicationController
   end
 
   def index
-    render json: Like.all
+    render json: current_user.likes
   end
 
   def update
